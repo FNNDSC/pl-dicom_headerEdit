@@ -1,18 +1,18 @@
 from setuptools import setup
 
 setup(
-    name='chris-plugin-template',
+    name='dicom_headerEdit',
     version='1.0.0',
-    description='A ChRIS DS plugin template',
+    description='"dicom_headerEdit" is a ChRIS DS plugin that allows for batch editing of DICOM header fields.',
     author='FNNDSC',
     author_email='dev@babyMRI.org',
-    url='https://github.com/FNNDSC/python-chrisapp-template',
-    py_modules=['app'],
+    url='https://github.com/FNNDSC/pl-dicom_headerEdit',
+    py_modules=['dicom_headerEdit'],
     install_requires=['chris_plugin'],
     license='MIT',
     entry_points={
         'console_scripts': [
-            'commandname = app:main'
+            'dicom_headerEdit = dicom_headerEdit:main'
         ]
     },
     classifiers=[
