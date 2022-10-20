@@ -1,1 +1,2 @@
 chris_plugin==0.1.1
+pfdicom_tagSub
