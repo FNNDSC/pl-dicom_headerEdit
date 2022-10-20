@@ -8,9 +8,9 @@
 # STEP 1. Change these values to your liking.
 
 PLUGIN_NAME="$(basename $(dirname $(realpath $0)))"  # name of current directory
-PLUGIN_TITLE='My ChRIS Plugin'
-SCRIPT_NAME='commandname'
-DESCRIPTION='A ChRIS plugin to do something awesome'
+PLUGIN_TITLE='Edit DICOM header fields'
+SCRIPT_NAME='dicom_headerEdit'
+DESCRIPTION='"dicom_headerEdit" is a ChRIS DS plugin that allows for batch editing of DICOM header fields.'
 ORGANIZATION='FNNDSC'
 EMAIL='dev@babyMRI.org'
 
@@ -22,7 +22,7 @@ ENABLE_ACTIONS_BUILD=yes
 
 # STEP 2. Uncomment the line below.
 
-#READY=yes
+READY=yes
 
 # STEP 3. Run: ./bootstrap.sh
 
