@@ -1,2 +1,5 @@
 chris_plugin==0.1.1
-pfdicom_tagSub
+pftree>=3.2.32
+pfdicom>=2.0.12
+pfdicom_tagSub>3.0.4
+
