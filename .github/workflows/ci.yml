@@ -1,24 +1,25 @@
 # Continuous integration testing for ChRIS Plugin.
 # https://github.com/FNNDSC/python-chrisapp-template/wiki/Continuous-Integration
 #
-# - on push, release, and PR: run pytest
+# - on push and PR: run pytest
 # - on push to main: build and push container images as ":latest"
-# - on release: build and push container image with tag and
-#               upload plugin description to https://chrisstore.co
+# - on push to server tag: build and push container image with tag and
+#                          upload plugin description to https://chrisstore.co
 
 name: build
 
 on:
   push:
     branches: [ main ]
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+*'
   pull_request:
     branches: [ main ]
-  release:
-    types: [ published ]
 
 jobs:
   test:
     name: Unit tests
+    if: false  # delete this line to enable automatic testing
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -47,10 +48,7 @@ jobs:
 
   build:
     name: Build
-    if: github.event_name == 'push' || github.event_name == 'release'
-    # needs: [ test ]  # uncomment to require passing tests
     runs-on: ubuntu-22.04
-
     # A local registry helps us reuse the built image between steps
     services:
       registry:
@@ -148,7 +146,7 @@ jobs:
           repository: ${{ steps.determine.outputs.repo }}
 
       - name: Upload to ChRIS Store
-        if: github.event_name == 'release'
+        if: steps.git_info.outcome != 'skipped'
         uses: FNNDSC/chrisstore-action@master
         with:
           descriptor_file: /tmp/description.json
