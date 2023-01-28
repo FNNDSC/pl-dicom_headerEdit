@@ -46,7 +46,8 @@ Note that being a ChRIS DS plugin, `dicom_headerEdit` requires two positional ar
 In this example, assume that you have a directory called `in` that contains DICOM data. This data can be nested into any arbitrary tree.
 
 ```shell
-singularity exec --cleanenv docker://fnndsc/pl-dicom_info dicom_headerEdit in out \
+singularity exec --cleanenv docker://fnndsc/pl-dicom_headeredit dicom_headerEdit  \
+            in out                                                                \
             --fileFilter dcm                                                      \
             --splitToken ","                                                      \
             --splitKeyValue "="                                                   \
