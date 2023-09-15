@@ -1,6 +1,6 @@
 # Edit DICOM header fields
 
-[![Version](https://img.shields.io/docker/v/fnndsc/pl-dicom_headerEdit?sort=semver)](https://hub.docker.com/r/fnndsc/pl-dicom_headerEdit)
+[![Version](https://img.shields.io/docker/v/fnndsc/pl-dicom_headeredit?sort=semver)](https://hub.docker.com/r/fnndsc/pl-dicom_headerEdit)
 [![MIT License](https://img.shields.io/github/license/fnndsc/pl-dicom_headerEdit)](https://github.com/FNNDSC/pl-dicom_headerEdit/blob/main/LICENSE)
 [![ci](https://github.com/FNNDSC/pl-dicom_headerEdit/actions/workflows/ci.yml/badge.svg)](https://github.com/FNNDSC/pl-dicom_headerEdit/actions/workflows/ci.yml)
 
