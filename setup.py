@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='dicom_headerEdit',
-    version='1.1.1',
+    version='1.1.2',
     description='"dicom_headerEdit" is a ChRIS DS plugin that allows for batch editing of DICOM header fields.',
     author='FNNDSC',
     author_email='dev@babyMRI.org',

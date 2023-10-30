@@ -23,6 +23,7 @@ from    pfdicom_tagSub.__main__     import  package_CLIDS,              \
                                             package_argsSynopsisDS,     \
                                             package_tagProcessingHelp
 from    pfdicom_tagSub.__main__     import  parserDS
+from    pflog                       import pflog
 
 
 DISPLAY_TITLE = r"""
@@ -174,6 +175,10 @@ def earlyExit_check(args) -> int:
     min_memory_limit='2Gi',    # supported units: Mi, Gi
     min_cpu_limit='1000m',       # millicores, e.g. "1000m" = 1 CPU core
     min_gpu_limit=0              # set min_gpu_limit=1 to enable GPU
+)
+@pflog.tel_logTime(
+            event       = 'dicom_headerEdit',
+            log         = 'Edit DICOM header fields'
 )
 def main(options: Namespace, inputdir: Path, outputdir: Path):
     """
