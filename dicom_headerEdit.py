@@ -54,6 +54,12 @@ str_desc    = '''
 
 ''' + Colors.NO_COLOUR
 
+parserDS.add_argument(  '--pftelDB',
+                    dest        = 'pftelDB',
+                    default     = '',
+                    type        = str,
+                    help        = 'optional pftel server DB path')
+
 def synopsis(ab_shortOnly = False):
     scriptName = os.path.basename(sys.argv[0])
     shortSynopsis =  '''
