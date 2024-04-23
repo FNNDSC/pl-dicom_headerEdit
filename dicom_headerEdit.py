@@ -178,7 +178,7 @@ def earlyExit_check(args) -> int:
     parser=parserDS,
     title='Edit DICOM header fields',
     category='',                 # ref. https://chrisstore.co/plugins
-    min_memory_limit='4Gi',    # supported units: Mi, Gi
+    min_memory_limit='16Gi',    # supported units: Mi, Gi
     min_cpu_limit='2000m',       # millicores, e.g. "1000m" = 1 CPU core
     min_gpu_limit=0              # set min_gpu_limit=1 to enable GPU
 )
