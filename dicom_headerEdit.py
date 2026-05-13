@@ -21,7 +21,7 @@ from    pfdicom_tagSub.__main__     import  package_CLIDS,              \
                                             package_tagProcessingHelp
 from    pfdicom_tagSub.__main__     import  parserDS
 
-__version__ = '1.1.9'
+__version__ = '1.2.0'
 
 
 DISPLAY_TITLE = r"""
